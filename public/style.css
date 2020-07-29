@@ -1,0 +1,26 @@
+#loginBox {
+    display: flex;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+}
+#backg {
+    background-image: url("./media/backg.jpg");
+}
+#chatBox {
+    display: flex;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+}
+
+#name {
+    margin-top: 2rem;
+    font-size: 2em;
+}

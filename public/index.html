@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script><!--If commented out then io is no longer a function-->
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="name" align="center" class="font-weight-bolder font-italic"></div>
+    <div id="loginBox">
+        
+        <div class="col-md-3 border border-dark shadow p-3 mb-5 bg-white rounded " id="backg">
+            <h3 class="text-center">
+                LOGIN
+                <small class="text-muted">here...</small>
+              </h3>
+            <div class="form-group">
+                <label for="inpUsername">Enter Username</label>
+                <input type="text" class="form-control" id="inpUsername" aria-describedby="newTaskHelp" placeholder="Enter username here">
+                
+              </div>
+              <div class="form-group">
+                <label for="inpPassword">Enter Password</label>
+                <input type="password" class="form-control" id="inpPassword" aria-describedby="newTaskHelp" placeholder="Enter password here">
+                
+              </div>
+              
+              <div class="form-group text-center">
+                <button class="btn btn-lg btn-warning btn-block" id="btnStart" type="button">Sign in</button>
+                
+             </div>
+        </div>
+
+    </div>
+
+
+<div id="aligner">
+    <div id="chatBox">
+      <div class="col-md-3 border border-dark shadow p-3 mb-5 bg-white rounded ">
+        <div class="form-group">
+          <label for="inpToUser">Enter Username</label>
+          <input type="text" class="form-control" id="inpToUser" aria-describedby="newTaskHelp" placeholder="Send to (default everyone)">
+          
+        </div>
+        <div class="form-group">
+          <label for="inpNewMsg">Message</label>
+          <input type="text" class="form-control" id="inpNewMsg" aria-describedby="newTaskHelp" placeholder="New message here">
+          
+        </div>
+        
+        <div class="form-group text-center">
+          <button class="btn btn-lg btn-warning btn-block" id="btnSendMsg" type="button">Send</button>
+       
+      </div>
+      
+    </div><ul id="ulMsgs" class="list-group list-group-flush"></ul>
+  </div>
+<!--
+    <div id="chatBox">
+        <input id="inpToUser" placeholder="Send to (default everyone)">
+        <input id="inpNewMsg" placeholder="New message here">
+        <button id="btnSendMsg">Send</button>
+        <ul id="ulMsgs"></ul>
+    </div>-->
+</body>
+</html>
