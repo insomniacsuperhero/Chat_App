@@ -5,7 +5,7 @@ const socketio = require('socket.io')
 
 const server = http.createServer(app)
 const io = socketio(server)
-
+const SERVER_PORT = process.env.PORT || 3344
 let users = {}
 let socketMap = {}
 
@@ -49,6 +49,6 @@ io.on('connection', (socket) => {
 
 app.use('/', express.static(__dirname + '/public'))
 
-server.listen(3344, () => {
+server.listen(SERVER_PORT, () => {
   console.log('Started on http://localhost:3344')
 })
